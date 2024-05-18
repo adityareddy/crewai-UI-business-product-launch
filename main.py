@@ -4,12 +4,12 @@ import streamlit as st
 from crewai import Agent, Task, Crew, Process
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain.agents import Tool
-from langchain_google_genai import ChatGoogleGenerativeAI
+import google.generativeai as genai
 import os
 import re
 
 # NOTE: to find which model names you have, use cli tool:  `ollama list`
-llm = ChatGoogleGenerativeAI(model="gemini-pro")
+llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=os.getenv("GOOGLE_API_KEY"))
 
 duckduckgo_search = DuckDuckGoSearchRun()
 
