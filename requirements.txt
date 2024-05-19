@@ -3,4 +3,4 @@ pysqlite3-binary
 crewai
 duckduckgo-search
 langchain
-langchain-google-genai
+langchain-google-genai==0.0.8
